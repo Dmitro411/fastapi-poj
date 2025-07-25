@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for book_name, book in books.items() %}
+    <div class="card my-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ book_name }}</h5>
+    <p class="card-text">{{ book.author }}</p>
+    <p class="card-text">{{ book.pages }}</p>
+    <p class="card-text">{{ book.category }}</p>
+  </div>
+    </div>
+{% endfor %}
+{% endblock %}
